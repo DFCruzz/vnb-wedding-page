@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@elasticemail/elasticemail-client": "^4.0.23",
     "axios": "^1.5.1",
     "dotenv": "^16.3.1",
     "leaflet": "^1.9.4",

@@ -89,7 +89,7 @@ export default function Lista() {
             id: 11,
             title: "Lingerie Chic",
             description: "Para a noiva usar na noite de núpcias",
-            imageUrl: "https://via.placeholder.com/250x200",
+            imageUrl: "https://cdn.discordapp.com/attachments/736993448124481619/1158032418138230904/main-qimg-a7d4d5da4b11e7abb661f94f2de25473-lq.png",
             price: "155,00",
             productUrl: "https://pag.ae/7ZR2KuE-u"
         },
@@ -97,7 +97,7 @@ export default function Lista() {
             id: 12,
             title: "Cueca Chic",
             description: "Para o noivo usar na noite de núpcias",
-            imageUrl: "https://cdn.discordapp.com/attachments/736993448124481619/1158032418138230904/main-qimg-a7d4d5da4b11e7abb661f94f2de25473-lq.png",
+            imageUrl: "https://cdn.discordapp.com/attachments/736993448124481619/1154860794744410182/70c37c6263fce611a628b6954cf694d1.png",
             price: "60,00",
             productUrl: "https://pag.ae/7ZR2qbu19"
         },

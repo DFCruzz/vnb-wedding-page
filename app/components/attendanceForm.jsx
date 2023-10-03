@@ -1,6 +1,9 @@
 "use client"
 import React, { useState } from "react";
-import axios from "axios";
+const ElasticEmail = require('@elasticemail/elasticemail-client');
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const AttendanceForm = () => {
   const [fullName, setFullName] = useState("");
@@ -9,36 +12,67 @@ const AttendanceForm = () => {
   const [attendeeNumber, setAttendeeNumber] = useState("");
   const [eventType, setEventType] = useState("");
 
+  const EmailApiKey = process.env.NEXT_PUBLIC_EMAIL_API;
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
+    const client = ElasticEmail.ApiClient.instance;
+    const apikey = client.authentications['apikey'];
+    apikey.apiKey = EmailApiKey;
+    
+    const emailsApi = new ElasticEmail.EmailsApi();
     const emailData = {
-      subject: `${fullName} - Confirmação de Presença`,
-      to: "diegofcruzz@gmail.com",
-      from: `diegojogoseafins@gmail.com`,
-      bodyText: `Nome: ${fullName}\nTelefone: ${phone}\nEmail: ${email}\nQuantas pessoas irão: ${attendeeNumber}\nEm qual evento você irá comparecer? ${eventType}`,
+      Recipients: [
+        {
+          Email: "diegofcruzz@gmail.com",
+          Fields: {
+            name: `${fullName}`
+          }
+        }
+      ],
+      Content: {
+        Body: [
+          {
+            ContentType: "HTML",
+            Charset: "utf-8",
+            Content: `<p><strong>Mensagem de ${fullName} sobre seu comparecimento no evento</strong></p>
+                      <p>Nome: ${fullName}</p>
+                      <p>Telefone: ${phone}</p>
+                      <p>Email: ${email}</p>
+                      <p>Quantas pessoas irão:</p>
+                      <p><strong>${attendeeNumber}</strong></p>
+                      <p>Em qual evento você irá comparecer?</p>
+                      <p><strong>${eventType}</strong></p>`,
+          },
+          {
+            ContentType: "PlainText",
+            Charset: "utf-8",
+            Content: `Hi {name}!\n
+                      Nome: ${fullName}\n
+                      Telefone: ${phone}\n
+                      Email: ${email}\n
+                      Quantas pessoas irão: ${attendeeNumber}\n
+                      Em qual evento você irá comparecer? ${eventType}`,
+          },
+        ],
+        From: "diegojogoseafins@gmail.com",
+        Subject: `${fullName} - Confirmação de Presença`,
+      },
     };
 
-    try {
-      const response = await axios.post(
-        "https://api.elasticemail.com/v2/email/send",
-        emailData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "X-ElasticEmail-ApiKey": process.env.EMAIL_API_KEY,
-          },
-        }
-      );
-
-      if (response.data.success) {
-        alert("Email sent successfully");
+    const callback = (error, data, response) => {
+      if (error) {
+          console.error(error);
+          console.log(process.env.API_KEY)
+          alert("Falha ao enviar o formulário, tente novamente")
       } else {
-        alert("Email sending failed");
+          console.log('API called successfully.');
+          console.log('Email sent.');
+          alert("Formulário enviado com sucesso")
       }
-    } catch (error) {
-      console.error("Error sending email:", error);
-    }
+  };
+  emailsApi.emailsPost(emailData, callback);
 
     setFullName("");
     setPhone("");

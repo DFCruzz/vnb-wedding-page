@@ -64,7 +64,6 @@ const AttendanceForm = () => {
     const callback = (error, data, response) => {
       if (error) {
           console.error(error);
-          console.log(process.env.API_KEY)
           alert("Falha ao enviar o formulário, tente novamente")
       } else {
           console.log('API called successfully.');

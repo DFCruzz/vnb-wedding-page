@@ -25,17 +25,17 @@ export const Navbar = () => {
             : "bg-[#859f7e]/30 backdrop-blur border-lime-900"
         }`}
       >
-        <div className="container flex flex-col sm:flex-row-reverse items-center justify-between p-6 mx-auto">
+        <div className="container flex flex-col sm:flex-row-reverse items-center justify-between p-2 sm:p-6 mx-auto">
           <div className="flex justify-between gap-4 sm:gap-8">
             <Link
               href="/lista"
-              className="duration-200 text-sm sm:text-lg text-lime-950 hover:text-lime-600 font-ysra tracking-widest font-semibold mb-2 sm:mb-0 sm:text-md"
+              className="duration-200 text-lg text-lime-950 hover:text-lime-600 font-ysra tracking-wide sm:tracking-widest font-semibold mb-2 sm:mb-0 sm:text-md"
             >
               Lista de Presentes
             </Link>
             <Link
               href="/#attendance"
-              className="duration-200 text-sm sm:text-lg text-lime-950 hover:text-lime-600 font-ysra tracking-widest font-semibold"
+              className="duration-200 text-lg text-lime-950 hover:text-lime-600 font-ysra tracking-wide sm:tracking-widest font-semibold"
             >
               Confirmar Presença
             </Link>
@@ -43,7 +43,7 @@ export const Navbar = () => {
 
           <Link
             href="/"
-            className="duration-200 font-paris text-2xl sm:text-3xl text-lime-950 hover:text-lime-600 font-semibold mt-4 sm:mt-0"
+            className="duration-200 font-paris text-3xl text-lime-950 hover:text-lime-600 font-semibold mt-2 sm:mt-0"
           >
             V & B
           </Link>

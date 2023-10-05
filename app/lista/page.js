@@ -103,7 +103,7 @@ export default function Lista() {
         },
         {
             id: 13,
-            title: "Jartar para os noivos",
+            title: "Jantar para os noivos",
             description: "Jantar para o primeiro dia de casados",
             imageUrl: "https://cdn.discordapp.com/attachments/736993448124481619/1154861614881833081/15036220.png",
             price: "75,00",

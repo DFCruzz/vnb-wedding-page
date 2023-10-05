@@ -2,13 +2,13 @@
 import React, { useEffect, useRef } from 'react';
 import 'leaflet/dist/leaflet.css';
 
-export const Map = () => {
+export const Map = ({x, y}) => {
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
 
   useEffect(() => {
     if (mapRef.current) {
-      const initialLocation = [-23.19657551804988, -46.87305093228129];
+      const initialLocation = [x, y];
       const initialZoom = 15;
 
       if (typeof window !== 'undefined') {

@@ -9,7 +9,7 @@ export const Footer = () => {
 
                 <div className="w-full flex flex-col items-center justify-between p-12 text-lime-950">
                     <div className="mb-4 font-vibes text-4xl">
-                        Vinicius & Beatriz - 11 . 11. 2023
+                        Vinícius & Beatriz - 11 . 11. 2023
                     </div>
                     <div className="flex flex-row items-center justify-center font-ysra text-sm -mb-10" >Desenvolvido por Diego Cruz <Link className="text-xl px-2" href="https://github.com/DFCruzz"><IoLogoGithub /></Link></div>
                 </div>

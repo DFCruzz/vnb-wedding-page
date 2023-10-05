@@ -25,7 +25,7 @@ const AttendanceForm = () => {
     const emailData = {
       Recipients: [
         {
-          Email: "diegofcruzz@gmail.com",
+          Email: process.env.NEXT_PUBLIC_EMAIL_RECEIVER,
           Fields: {
             name: `${fullName}`
           }
@@ -56,7 +56,7 @@ const AttendanceForm = () => {
                       Em qual evento você irá comparecer? ${eventType}`,
           },
         ],
-        From: "diegojogoseafins@gmail.com",
+        From: process.env.NEXT_PUBLIC_EMAIL_SENDER,
         Subject: `${fullName} - Confirmação de Presença`,
       },
     };

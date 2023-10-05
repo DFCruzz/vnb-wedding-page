@@ -7,11 +7,11 @@ export default function Lista() {
     const cardData = [
         {
             id: 1,
-            title: "Um ano de Netflix",
-            description: "Para os noivos curtirem bons filmes!",
-            imageUrl: "https://cdn.discordapp.com/attachments/736993448124481619/1154853146800160890/images.jpeg",
-            price: "315,00",
-            productUrl: "https://pag.ae/7ZR2gV3X5"
+            title: "Alexa",
+            description: "Alexa (para a noiva não mandar só no noivo)",
+            imageUrl: "https://cdn.discordapp.com/attachments/736993448124481619/1154857007426306068/images.png",
+            price: "310,00",
+            productUrl: "https://pag.ae/7ZR2iTvsJ"
         },
         {
             id: 2,
@@ -39,10 +39,10 @@ export default function Lista() {
         },
         {
             id: 5,
-            title: "Alexa",
-            description: "Alexa (para a noiva não mandar só no noivo)",
-            imageUrl: "https://cdn.discordapp.com/attachments/736993448124481619/1154857007426306068/images.png",
-            price: "310,00",
+            title: "Parente do Ano!",
+            description: "Seja o nosso parente preferido! Grande oportunidade!",
+            imageUrl: "https://cdn.discordapp.com/attachments/736993448124481619/1159458181928472657/Imagem_Parente_do_Ano.png",
+            price: "3200,00",
             productUrl: "https://pag.ae/7ZR2iTvsJ"
         },
         {

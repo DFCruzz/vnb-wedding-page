@@ -68,7 +68,7 @@ export default function Home() {
               <h3 className="text-base md:text-lg font-ysra"><span className="text-lime-800 font-bold">Local:</span> Villa Brunholi</h3>
               <h3 className="text-base md:text-lg font-ysra"><span className="text-lime-800 font-bold">Endereço:</span> Av. Humberto Cereser, 5900</h3>
               <h3 className="text-base md:text-lg font-ysra">Jardim Caxambu, Jundiaí - SP, 13218-711.</h3>
-              <h3 className="mb-4 text-base md:text-lg font-ysra"><span className="text-lime-800 font-bold">Dia:</span> 11 de Novembro às 12:00 da tarde</h3>
+              <h3 className="mb-4 text-base md:text-lg font-ysra"><span className="text-lime-800 font-bold">Dia:</span> 11 de Novembro às 12:00 (meio-dia)</h3>
               <Map
                 x={-23.151815554812206}
                 y={-46.82429182883575}

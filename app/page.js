@@ -19,7 +19,7 @@ export default function Home() {
           <div className="font-vibes text-2xl md:text-4xl">| 11 . 11 . 2023 |</div>
         </div>
       </section>
-      <div className="pt-16 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
+      <div className="px-4 pt-16 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
         <div className="flex flex-col items-center">
           <h1 className="text-2xl md:text-5xl font-vibes text-lime-800 mb-8">
             Contagem regressiva para o grande dia!

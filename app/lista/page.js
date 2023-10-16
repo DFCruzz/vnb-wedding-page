@@ -43,7 +43,7 @@ export default function Lista() {
             description: "Seja o nosso parente preferido! Grande oportunidade!",
             imageUrl: "https://cdn.discordapp.com/attachments/736993448124481619/1159458181928472657/Imagem_Parente_do_Ano.png",
             price: "3200,00",
-            productUrl: "https://pag.ae/7ZR2iTvsJ"
+            productUrl: "https://pag.ae/7ZRof3DQq"
         },
         {
             id: 6,
